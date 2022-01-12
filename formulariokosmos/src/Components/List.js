@@ -81,7 +81,7 @@ function List() {
 
   const onFormSubmitAdd = (event) => {
     event.preventDefault();
-    console.log("target", event.target.value);
+    let id = books.length + 1;
     if (
       bookTitle == "" ||
       author == "" ||
@@ -92,6 +92,7 @@ function List() {
       alert("The fields are emptys or the form is not complete");
     } else {
       let newbooks = {
+        id : id,
         title: bookTitle,
         author: author,
         genre: genre,
